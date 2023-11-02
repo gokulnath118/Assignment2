@@ -1,4 +1,4 @@
-FROM tensorflow:latest
+FROM tensorflow:2.6
 
 # Set environment variables for Python
 ENV PYTHONDONTWRITEBYTECODE 1
