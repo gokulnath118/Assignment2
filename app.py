@@ -11,6 +11,7 @@ model = tf.keras.models.load_model('LiveToxicComment.h5')
 with open('tokenizer.pkl', 'rb') as file:
     tokenizer= pickle.load(file)
 
+
 @app.route("/", methods=["GET", "POST"])
 def predict():
     if request.method == "POST":
