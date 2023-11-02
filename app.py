@@ -8,8 +8,8 @@ app = Flask(__name__)
 
 # Load the model and tokenizer
 model = tf.keras.models.load_model('LiveToxicComment.h5')
-with open('tokenizer.pkl', 'rb') as file:
-    tokenizer= pickle.load(file)
+file = open('tokenizer.pkl', 'rb')    
+tokenizer=pickle.load(file)
 
 
 @app.route("/", methods=["GET", "POST"])
